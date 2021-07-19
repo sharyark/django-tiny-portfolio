@@ -20,3 +20,5 @@ boxThread.start()
 ledThread.start()
 while True:
     pass
+
+print('this is simple example of threading everyone can understand it easily')
