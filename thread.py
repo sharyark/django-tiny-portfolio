@@ -22,3 +22,4 @@ while True:
     pass
 
 print('this is simple example of threading everyone can understand it easily')
+print('i am uploading first time on my social accont code this is why this would not be that much goood thanks')
