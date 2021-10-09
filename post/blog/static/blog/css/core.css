@@ -1,0 +1,24 @@
+@import "utilities";
+.st-font{
+    font-family: 'Satisfy', cursive;
+}
+a.nav-link
+{
+    background-color: azure;
+}
+html,body
+{
+    height: 100%;
+}
+.container-fluid
+{
+    min-height: 100%;
+}
+.i-color
+{
+    color: chartreuse;
+}
+.nav a.nav-link
+{
+    background-color: azure;
+}

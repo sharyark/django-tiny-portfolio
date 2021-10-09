@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="col-sm-12">
+
+<h3 class="text-white my-5">well in home pag</h3>
+
+ <form action="" method="POST">
+ {% csrf_token %}
+    {% for po in  form %}
+        {{po.label_tag}}
+        {{po}}
+        <br>
+        <br>
+    {% endfor %}
+<input type="submit" value="submit">
+</form>
+
+{% endblock content %}

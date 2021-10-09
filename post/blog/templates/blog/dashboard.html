@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="col-sm-12">
+
+<h3 class="text-white my-5">Dashboard page</h3>
+
+    <table class="text-white table table-striped">
+  <thead>
+    <tr class="text-white">
+      <th scope=" col">#</th>
+      <th scope="col">title</th>
+      <th scope="col">description</th>
+      <th class="text-center" scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for po in post %}
+    <tr class="text-white">
+      <th scope="row">{{po.id}}</th>
+      <td>{{po.title}}</td>
+      <td>{{po.desc}}</td>
+      <td class="text-center">
+      {% comment %} <a href="edit" class="btn btn-warning btn-sm"> Edit</a> {% endcomment %}
+       <form action="{% url 'edit' po.pk %}" method="POST" class = "d-inline">
+      {% csrf_token %}
+      <input type="submit" class="btn btn-danger" value="Edit">
+      </form>
+      <form action="{% url 'delete' po.pk %}" method="POST" class = "d-inline">
+      {% csrf_token %}
+      <input type="submit" class="btn btn-danger" value="Delete">
+      </form>
+      </td>
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+</div>
+
+{% endblock content %}
